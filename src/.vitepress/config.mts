@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  base: '/windrealm/',
+  base: '/',
   lang: 'zh-Hans',
   title: "风绘之境",
   description: "一个支持生电、养老的纯净综合性MC服务器~",
