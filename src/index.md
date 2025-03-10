@@ -7,7 +7,7 @@ hero:
   tagline: '一个支持生电、养老的纯净综合性MC服务器~'
   image:
     src: /assets/logo/Windrealm.svg
-    alt: VitePress
+    alt: windrealm logo
   actions:
     - theme: brand
       text: '关于'

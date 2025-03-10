@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/simpdoc.iml" filepath="$PROJECT_DIR$/.idea/simpdoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/windrealm.iml" filepath="$PROJECT_DIR$/.idea/windrealm.iml" />
     </modules>
   </component>
 </project>
