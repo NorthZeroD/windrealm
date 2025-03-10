@@ -41,7 +41,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/NorthZeroD/simpdoc' }
+      { icon: 'github', link: 'https://github.com/NorthZeroD/windrealm' }
     ],
 
     search: {
