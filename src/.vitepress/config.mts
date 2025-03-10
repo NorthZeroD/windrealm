@@ -5,7 +5,7 @@ export default defineConfig({
   lang: 'zh-Hans',
   title: "风绘之境",
   description: "一个支持生电、养老的纯净综合性MC服务器~",
-  head: [['link', { rel: 'icon', href: '/windrealm/assets/logo/Windrealm.svg' }]],
+  head: [['link', { rel: 'icon', href: '/assets/logo/Windrealm.svg' }]],
   lastUpdated: true,
 
   markdown: {
