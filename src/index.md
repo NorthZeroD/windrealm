@@ -18,7 +18,7 @@ hero:
 
 features:
   - title: '关于'
-    details: '前往index.html'
+    details: '前往about.html'
     link: /about
 
   - title: '联系我们'
