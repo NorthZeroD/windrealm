@@ -1,11 +1,12 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  outDir: '../docs',
   base: '/',
   lang: 'zh-Hans',
   title: "风绘之境",
   description: "一个支持生电、养老的纯净综合性MC服务器~",
-  head: [['link', { rel: 'icon', href: '/img/logo/Windrealm.svg' }]],
+  head: [['link', { rel: 'icon', href: '../img/logo/Windrealm.svg' }]],
   lastUpdated: true,
 
   markdown: {
@@ -20,7 +21,7 @@ export default defineConfig({
 
   themeConfig: {
 
-    logo: '/img/logo/Windrealm.svg',
+    logo: '../img/logo/Windrealm.svg',
     sidebar: [
       {
         text: '关于',
