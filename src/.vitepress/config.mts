@@ -1,12 +1,12 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  outDir: '../docs',
+
   base: '/',
   lang: 'zh-Hans',
   title: "风绘之境",
   description: "一个支持生电、养老的纯净综合性MC服务器~",
-  head: [['link', { rel: 'icon', href: '/img/logo/Windrealm.svg' }]],
+  head: [['link', { rel: 'icon', href: '/logo/Windrealm.svg' }]],
   lastUpdated: true,
 
   markdown: {
@@ -19,39 +19,54 @@ export default defineConfig({
     }
   },
 
+  vite
+      : {
+    optimizeDeps
+        : {
+      exclude
+          : [
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+        'vitepress',
+        '@nolebase/ui',
+      ],
+    },
+    ssr
+        : {
+      noExternal
+          : [
+        // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可 //
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/ui',
+      ],
+    },
+  },
+
   themeConfig: {
 
-    logo: '/img/logo/Windrealm.svg',
-    sidebar: [
-      {
-        text: '关于',
-        items: [
-          {text: '关于', link: '/about'}
-        ]
-      },
-      {
-        text: '联系我们',
-        items: [
-          {text: '联系我们', link: '/contact'}
-        ]
-      }
-    ],
+    logo: '/logo/Windrealm.svg',
+
+    sidebar: {
+      '/': { base: '/', items: sidebarWindrealm() },
+    },
+
 
     nav: [
-      { text: '主页', link: '/' }
+      { text: '首页', link: '/' },
+      { text: '主站', link: 'https://mikufun.top' }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/NorthZeroD/windrealm' }
+      { icon: 'github', link: 'https://github.com/WindrealmMC' }
     ],
 
-    search: {
-      provider: 'local'
+    editLink: {
+      pattern: 'https://github.com/WindrealmMC/docs',
+      text: '在 GitHub 上编辑此页面'
     },
 
     footer: {
       message: '本站所有文档采用 CC BY-SA 4.0 许可协议发布',
-      copyright: `版权所有 © 2019-${new Date().getFullYear()} NorthZeroD`
+      copyright: `版权所有 © 2019-${new Date().getFullYear()} WindrealmMC`
     },
 
     docFooter: {
@@ -77,6 +92,50 @@ export default defineConfig({
     darkModeSwitchLabel: '主题',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
-    skipToContentLabel: '跳转到内容'
+    skipToContentLabel: '跳转到内容',
+
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索文档',
+            buttonAriaLabel: '搜索文档'
+          },
+          modal: {
+            displayDetails: '显示详情',
+            resetButtonTitle: '清除查询',
+            backButtonTitle: '返回',
+            noResultsText: '没有找到相关内容',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭'
+            }
+          }
+        }
+      }
+    }
   }
 })
+
+function sidebarWindrealm(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      items: [
+        {
+          text: '关于',
+          items: [
+            { text: '关于', link: 'about' }
+          ],
+        },
+        {
+          text: '联系我们',
+          items: [
+            { text: '联系我们', link: 'contact' }
+          ],
+        },
+      ],
+    },
+  ]
+}
